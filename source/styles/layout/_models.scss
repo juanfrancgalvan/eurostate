@@ -15,7 +15,7 @@
   background-size: contain;
   margin-bottom: 60px;
 
-  @include mix.desktop {
+  @include mix.laptop {
     grid-template-rows: unset;
   }
 

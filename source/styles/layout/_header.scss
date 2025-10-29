@@ -12,7 +12,7 @@
   right: 0;
   padding: 50px 100px;
 
-  @include mix.desktop {
+  @include mix.laptop {
     padding: 50px 20px;
   }
 

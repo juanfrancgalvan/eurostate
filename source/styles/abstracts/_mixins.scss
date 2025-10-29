@@ -12,8 +12,8 @@
   }
 }
 
-@mixin desktop {
-  @media only screen and (max-width: #{var.$desktop}) {
+@mixin laptop {
+  @media only screen and (max-width: #{var.$laptop}) {
     @content;
   }
 }

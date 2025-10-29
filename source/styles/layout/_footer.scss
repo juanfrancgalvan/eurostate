@@ -14,7 +14,7 @@
   text-align: center;
   color: var.$white;
 
-  @include mix.phone {
+  @include mix.tablet {
     background-attachment: scroll;
   }
 }
