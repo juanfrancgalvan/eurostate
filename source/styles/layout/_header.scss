@@ -43,6 +43,7 @@
 
   @include mix.phone { 
     flex-direction: column;
+    gap: unset;
   }
 }
 
