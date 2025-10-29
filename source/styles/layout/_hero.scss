@@ -1,0 +1,40 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mix;
+
+.hero {
+  background-image: url('/build/images/hero.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero__slogan {
+  text-align: right;
+  padding: 70px 100px;
+  color: var.$white;
+  background-color: rgba(0, 0, 0, 0.50);
+
+  @include mix.phone {
+    text-align: center;
+    padding: 70px 0;
+  }
+}
+
+.hero__title {
+  font-size: 50px;
+
+  @include mix.phone {
+    font-size: 30px;
+  }
+}
+
+.hero__text {
+  margin: 0;
+  line-height: 1;
+  font-size: 22px;
+}

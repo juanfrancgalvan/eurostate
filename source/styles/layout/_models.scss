@@ -1,0 +1,123 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mix;
+
+.models__title {
+  font-size: 2.5rem;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.model {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 60px;
+
+  @include mix.desktop {
+    grid-template-rows: unset;
+  }
+
+  @include mix.phone {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 1fr);
+    background-size: cover;
+  }
+}
+
+.model__content {
+  padding: 50px;
+  background-color: var.$white;
+
+  @include mix.phone {
+    padding: 10px 20px;
+  }
+}
+
+.model__content--title {
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.model__content--text {
+  margin-bottom: 20px;
+}
+
+.model__basic {
+  background-image: url('/build/images/models/0.webp');
+  background-position: right;
+
+  @include mix.phone {
+    background-position: center -250px;
+  }
+
+  .model__content {
+    position: relative;
+    bottom: 30px;
+
+    @include mix.tablet {
+      position: unset;
+    }
+  }
+}
+
+.model__basic .model__content {
+  grid-row: 2/3;
+  padding: 40px 40px 40px 0;
+}
+
+.model__premium {
+  background-image: url('/build/images/models/1.webp');
+  background-position: left;
+
+  @include mix.phone {
+    background-position: center -130px;
+  }
+
+  .model__content {
+    position: relative;
+    top: 30px;
+
+    @include mix.tablet {
+      position: unset;
+    }
+  }
+}
+
+.model__premium .model__content {
+  grid-column: 2/3;
+  padding: 40px;
+}
+
+.model__elite {
+  background-image: url('/build/images/models/2.webp');
+  background-position: right;
+
+  @include mix.phone {
+    background-position: center -125px;
+  }
+
+  .model__content {
+    position: relative;
+    top: 50px;
+
+    @include mix.tablet {
+      position: unset;
+    }
+  }
+}
+
+.model__elite .model__content {
+  grid-column: 1/2;
+  padding: 40px 40px 40px 0;
+}
+
+.model__elite .model__content,
+.model__premium .model__content,
+.model__basic .model__content {
+  @include mix.phone {
+    grid-row: 2/3;
+    padding: 10px 0;
+  }
+}

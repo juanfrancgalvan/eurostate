@@ -1,0 +1,19 @@
+@use 'abstracts/variables' as var;
+
+@mixin phone {
+  @media only screen and (max-width: #{var.$phone}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: #{var.$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: #{var.$desktop}) {
+    @content;
+  }
+}

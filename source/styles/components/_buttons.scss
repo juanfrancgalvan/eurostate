@@ -1,0 +1,15 @@
+@use 'abstracts/variables' as var;
+
+.button {
+  color: var.$gray;
+  background-color: var.$white;
+  border: 1px solid var.$gray;
+  border-radius: 20px;
+  padding: 5px 20px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: var.$gray;
+  color: var.$white;
+}

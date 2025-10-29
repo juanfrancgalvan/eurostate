@@ -1,0 +1,30 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mix;
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-image: url('/build/images/about.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  @include mix.phone {
+    grid-template-columns: auto;
+    background-size: cover;
+    background-position: -330px 60px;
+  }
+}
+
+.about__content {
+  background-color: var.$white;
+  padding: 50px;
+  grid-column: 2 / 4;
+  position: relative;
+  top: 30px;
+
+  @include mix.phone {
+    padding: 20px 0;
+  }
+}

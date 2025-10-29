@@ -1,0 +1,23 @@
+@use 'abstracts/variables' as var;
+
+.footer {
+  height: 500px;
+  background-image: url('/build/images/footer.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  color: var.$white;
+}
+
+.footer__copyright {
+  background-color: var.$black;
+  text-align: center;
+  margin: 50px 0 0 0;
+  font-size: 15px;
+  padding: 10px;
+}
