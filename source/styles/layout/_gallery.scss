@@ -45,12 +45,16 @@
   }
 }
 
-.gallery__image:nth-child(6) {
-  grid-column: 3/4;
-  grid-row: 1/3;
-
-  @include mix.phone {
+@media only screen and (max-width: 576px) {
+  .gallery__image:nth-child(6) {
     grid-row: 2/4;
+  }
+}
+
+@media only screen and (min-width: 577px) {
+  .gallery__image:nth-child(6) {
+    grid-column: 3/4;
+    grid-row: 1/3;
   }
 }
 
@@ -73,6 +77,6 @@
     width: auto;
     height: auto;
     object-fit: contain;
-    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   }
 }
